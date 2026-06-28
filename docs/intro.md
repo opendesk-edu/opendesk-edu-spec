@@ -18,7 +18,7 @@ openDesk Edu is a comprehensive, production-ready platform that integrates 25 wo
 
 This OpenSpec documentation provides:
 
-- 📋 **Complete service specifications** for all 25 services
+- 📋 **Complete service specifications** across the full portfolio
 - 🔗 **Integration patterns** between services
 - 🏗️ **Platform-level concerns** (backup, monitoring, security, operations)
 - 📊 **Registry and metadata** (interconnection matrix, test coverage, glossary)

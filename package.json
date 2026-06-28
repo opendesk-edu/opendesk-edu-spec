@@ -2,7 +2,7 @@
   "name": "openspec-opendesk-edu",
   "version": "1.0.0",
   "private": true,
-  "description": "Interactive OpenSpec documentation for openDesk Edu - 25 services, 58 specifications",
+  "description": "Interactive OpenSpec documentation for openDesk Edu — comprehensive service and platform specifications",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",

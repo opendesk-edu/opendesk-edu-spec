@@ -33,7 +33,7 @@ component names, protocols, tiers, deployment waves, and HRZ-specific concepts.
 | Term | Definition |
 |------|-------------|
 | **openDesk CE** | Base platform: Nubus IAM, Collabora, Nextcloud, CryptPad, Draw.io, Excalidraw, Planka, Notes, Etherpad, BookStack, Zammad. |
-| **openDesk Edu** | openDesk CE + 25 education services: ILIAS, Moodle, Jitsi/BigBlueButton, XWiki, TYPO3, LimeSurvey, SSP, OpenProject, Element, etc. |
+| **openDesk Edu** | openDesk CE extended with education services: ILIAS, Moodle, Jitsi/BigBlueButton, XWiki, TYPO3, LimeSurvey, SSP, OpenProject, Element, etc. |
 | **oidc-client-secret** | The OAuth2 client secret stored in Kubernetes secrets (e.g., `sogo-sogo-secrets:oidc-client-secret`). |
 | **OD_PRIVATE_REGISTRY_USERNAME/PASSWORD** | Environment variables for pulling the private OCI registry charts (e.g., Nextcloud chart hosted on `registry.opencode.de`). |
 | **Kecloak realm** | The `opendesk` realm in Keycloak containing all OIDC clients and SP entities. |
