@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+version = 1
+
+# All content in this repository is licensed under Apache-2.0.
+# This is the specification repository — no orchestration code.
