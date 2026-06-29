@@ -2,7 +2,7 @@
 title: "Zammad"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -119,10 +119,10 @@ Nubus Portal (tile), Postfix (email tickets), Nextcloud (file attachments via In
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.5% (3.6 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (ticket page load) | Nginx access log analysis |
-| **Latency (P95)** | <300ms (search query) | Elasticsearch metrics |
-| **Error Rate** | <0.5% (HTTP 5xx) | Nginx access log analysis |
-| **Email-to-Ticket** | <2 minutes (postfix → Zammad) | Postfix + Zammad logs |
+| **Latency (P95)** | &lt;500ms (ticket page load) | Nginx access log analysis |
+| **Latency (P95)** | &lt;300ms (search query) | Elasticsearch metrics |
+| **Error Rate** | &lt;0.5% (HTTP 5xx) | Nginx access log analysis |
+| **Email-to-Ticket** | &lt;2 minutes (postfix → Zammad) | Postfix + Zammad logs |
 
 **Alerts**:
 - Zammad 5xx error rate >1% for 10 minutes → P2 alert

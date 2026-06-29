@@ -2,7 +2,7 @@
 title: "Resource Sizing Baselines"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -137,7 +137,7 @@ the minimum viable sizing for production workloads.
 - **3 control-plane nodes**: 4 cores, 8GiB each (not for workloads)
 - **6 worker nodes**: Variable sizing (verify with `kubectl describe nodes`)
 - **Recommended**: Minimum 8 cores, 16GiB per worker node for full Edu deployment
-- **Overcommit ratio**: Requests:Capacity SHOULD be < 0.8 for CPU, < 0.9 for memory
+- **Overcommit ratio**: Requests:Capacity SHOULD be &lt; 0.8 for CPU, &lt; 0.9 for memory
 
 ---
 
@@ -152,8 +152,8 @@ the minimum viable sizing for production workloads.
 
 ### When to Decrease Resources
 
-- Container consistently uses < 20% of CPU limit → decrease CPU request
-- Container consistently uses < 30% of memory limit → decrease memory request
+- Container consistently uses &lt; 20% of CPU limit → decrease CPU request
+- Container consistently uses &lt; 30% of memory limit → decrease memory request
 - NEVER decrease below observed peak usage + 20% headroom
 
 ### Storage Sizing

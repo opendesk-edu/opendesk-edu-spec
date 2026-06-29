@@ -2,7 +2,7 @@
 title: "ILIAS"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -213,9 +213,9 @@ Nubus Portal (portal tile, SSO redirect), Provisioning API (semester course prov
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.5% (3.6 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (page load) | Apache access log analysis |
-| **Latency (P95)** | <1s (course content delivery) | Lucene search + DB query time |
-| **Error Rate** | <0.5% (HTTP 5xx) | Apache access log analysis |
+| **Latency (P95)** | &lt;500ms (page load) | Apache access log analysis |
+| **Latency (P95)** | &lt;1s (course content delivery) | Lucene search + DB query time |
+| **Error Rate** | &lt;0.5% (HTTP 5xx) | Apache access log analysis |
 | **SSO Success** | >99% (Shibboleth auth) | Keycloak event log |
 
 **Alerts**:

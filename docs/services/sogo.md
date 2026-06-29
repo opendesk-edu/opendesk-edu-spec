@@ -2,7 +2,7 @@
 title: "SOGo (Alternative to OX App Suite)"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -256,9 +256,9 @@ SOGo SHALL expose liveness and readiness probes.
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.9% (43.2 min downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (webmail page load) | Apache access log analysis |
-| **Latency (P95)** | <200ms (IMAP operation) | Dovecot metrics |
-| **Error Rate** | <0.1% (HTTP 5xx) | Apache access log analysis |
+| **Latency (P95)** | &lt;500ms (webmail page load) | Apache access log analysis |
+| **Latency (P95)** | &lt;200ms (IMAP operation) | Dovecot metrics |
+| **Error Rate** | &lt;0.1% (HTTP 5xx) | Apache access log analysis |
 | **Sieve Filter Success** | >99% (email filtering) | Sieve log analysis |
 
 **Alerts**:

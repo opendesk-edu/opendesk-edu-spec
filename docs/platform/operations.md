@@ -2,7 +2,7 @@
 title: "Operations & Runbooks"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -278,7 +278,7 @@ checks. Each runbook defines preconditions, steps, and rollback.
    ```bash
    kubectl -n opendesk get schedule backup-live
    ```
-   Expected: `READY: True`, `LAST BACKUP: <timestamp>`.
+   Expected: `READY: True`, `LAST BACKUP: &lt;timestamp>`.
 
 2. **Check schedule annotations:**
    ```bash
@@ -311,7 +311,7 @@ checks. Each runbook defines preconditions, steps, and rollback.
 
 **Symptoms:**
 - Service A cannot reach Service B (e.g., Nextcloud → Dovecot IMAP, SOGo → LDAP)
-- `kubectl exec -ti <pod-a> -- curl -s http://<service-b>.<namespace>.svc:port` fails
+- `kubectl exec -ti &lt;pod-a> -- curl -s http://&lt;service-b>.&lt;namespace>.svc:port` fails
 
 **Root Cause:**
 - Service B not running
@@ -351,7 +351,7 @@ checks. Each runbook defines preconditions, steps, and rollback.
 5. **Test TCP connectivity from Pod A to Service B:**
    ```bash
    kubectl -n opendesk exec -ti <pod-a> -- timeout 5 bash -c \
-     'cat < /dev/null > /dev/tcp/<service-b>.opendesk.svc/<port>' && echo "OK" || echo "FAIL"
+     'cat &lt; /dev/null > /dev/tcp/&lt;service-b>.opendesk.svc/&lt;port>' && echo "OK" || echo "FAIL"
    ```
 
 ## Depends On

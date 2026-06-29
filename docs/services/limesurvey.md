@@ -2,7 +2,7 @@
 title: "LimeSurvey"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -149,9 +149,9 @@ Nubus Portal (tile, not role-based — LDAP group filter)
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (survey page load) | Apache access log analysis |
-| **Latency (P95)** | <300ms (response submission) | LimeSurvey metrics |
-| **Error Rate** | <1% (HTTP 5xx) | Apache access log analysis |
+| **Latency (P95)** | &lt;500ms (survey page load) | Apache access log analysis |
+| **Latency (P95)** | &lt;300ms (response submission) | LimeSurvey metrics |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Apache access log analysis |
 | **LDAP Auth Success** | >99% (LDAP bind) | LDAP access log |
 
 **Alerts**:

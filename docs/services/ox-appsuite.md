@@ -2,7 +2,7 @@
 title: "OX App Suite"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -259,9 +259,9 @@ OX App Suite SHALL integrate with Nubus Portal for centralized navigation.
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.9% (43.2 min downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (webmail page load) | OX AppSuite metrics |
-| **Latency (P95)** | <200ms (IMAP operation) | Dovecot metrics |
-| **Error Rate** | <0.1% (HTTP 5xx) | OX AppSuite access logs |
+| **Latency (P95)** | &lt;500ms (webmail page load) | OX AppSuite metrics |
+| **Latency (P95)** | &lt;200ms (IMAP operation) | Dovecot metrics |
+| **Error Rate** | &lt;0.1% (HTTP 5xx) | OX AppSuite access logs |
 | **Calendar Sync** | >99% (CalDAV operations) | CalDAV endpoint metrics |
 
 **Alerts**:

@@ -2,7 +2,7 @@
 title: "TYPO3 CMS"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -158,9 +158,9 @@ Nubus Portal (tile, role mapping `typo3-editor`)
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (page load) | Apache access log analysis |
-| **Latency (P95)** | <300ms (content edit save) | TYPO3 backend metrics |
-| **Error Rate** | <1% (HTTP 5xx) | Apache access log analysis |
+| **Latency (P95)** | &lt;500ms (page load) | Apache access log analysis |
+| **Latency (P95)** | &lt;300ms (content edit save) | TYPO3 backend metrics |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Apache access log analysis |
 | **SSO Success** | >99% (OIDC auth) | Keycloak event log |
 
 **Alerts**:

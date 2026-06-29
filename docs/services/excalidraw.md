@@ -2,7 +2,7 @@
 title: "Excalidraw"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -109,8 +109,8 @@ Nubus Portal (tile only — no data flow)
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <300ms (page load) | Nginx access log analysis |
-| **Error Rate** | <1% (HTTP 5xx) | Nginx access log analysis |
+| **Latency (P95)** | &lt;300ms (page load) | Nginx access log analysis |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Nginx access log analysis |
 
 **Alerts**:
 - Excalidraw 5xx error rate >2% for 10 minutes → P3 alert

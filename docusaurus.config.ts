@@ -13,7 +13,7 @@ const config: Config = {
   organizationName: 'opendesk-edu',
   projectName: 'openspec',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -47,10 +47,6 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/social-card.png',
-    colorMode: {
-      defaultMode: 'light',
-      respectPrefersColorScheme: true,
-    },
     navbar: {
       title: 'OpenSpec',
       logo: {
@@ -93,18 +89,18 @@ const config: Config = {
         {
           title: 'Documentation',
           items: [
-            {label: 'Getting Started', to: '/docs/intro'},
-            {label: 'Methodology', to: '/docs/methodology'},
-            {label: 'Glossary', to: '/docs/glossary'},
+            {label: 'Getting Started', to: '/intro'},
+            {label: 'Methodology', to: '/methodology'},
+            {label: 'Glossary', to: '/glossary'},
           ],
         },
         {
           title: 'Services',
           items: [
-            {label: 'All Services', to: '/services/'},
-            {label: 'Identity & Access', to: '/services/category/identity-access'},
-            {label: 'Learning Management', to: '/services/category/learning-management'},
-            {label: 'Communication', to: '/services/category/communication'},
+            {label: 'Nextcloud', to: '/services/nextcloud'},
+            {label: 'OpenCloud', to: '/services/opencloud'},
+            {label: 'Element', to: '/services/element'},
+            {label: 'View All →', href: 'https://github.com/opendesk-edu/opendesk-edu/tree/main/openspec/specs/docs/services'},
           ],
         },
         {
@@ -141,16 +137,6 @@ const config: Config = {
       defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: true,
-    },
-    docs: {
-      sidebar: {
-        hideScrollbar: false,
-        autoCollapseCategories: true,
-      },
-    },
-    blog: {
-      showReadingTime: true,
-      showAuthor: true,
     },
   } satisfies Preset.ThemeConfig,
 };

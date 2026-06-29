@@ -2,7 +2,7 @@
 title: "Nextcloud"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -70,7 +70,7 @@ configurable interval, using a dedicated LDAP bind DN for searches.
 - GIVEN users who are direct members of Nextcloud-authorized LDAP groups
 - WHEN the LDAP sync runs
 - THEN those users are granted Nextcloud access
-- AND the sync uses bind DN `uid=ldapsearch_nextcloud,cn=users,<baseDn>`
+- AND the sync uses bind DN `uid=ldapsearch_nextcloud,cn=users,&lt;baseDn>`
 
 #### Scenario: Nested group members excluded
 - GIVEN users who are members only of nested subgroups (not direct)
@@ -155,7 +155,7 @@ external shares, including expiry, password enforcement, and mail notification.
 Nextcloud SHALL enforce per-user storage quotas configured via AIO.
 
 #### Scenario: User quota enforcement
-- GIVEN `quota.default` set to `<N> GB`
+- GIVEN `quota.default` set to `&lt;N> GB`
 - WHEN a user's storage exceeds the quota
 - THEN upload attempts are rejected
 - AND the user receives a "storage full" notification
@@ -222,7 +222,7 @@ Nextcloud SHALL integrate with the Nubus central navigation bar.
 - GIVEN the OpenDesk integration app enabled
 - THEN Nextcloud fetches navigation.json from `http://ums-portal-server/portal/navigation.json`
 - AND the central navigation bar is rendered in the Nextcloud header
-- AND links point to `https://<nubus-host>.<domain>`
+- AND links point to `https://&lt;nubus-host>.&lt;domain>`
 
 ## Depends On
 
@@ -275,7 +275,7 @@ Nextcloud SHALL integrate with the Nubus central navigation bar.
 | Storage | S3/MinIO (primary) + CephFS RWX (`opendesk-nextcloud-data`, 100Gi) |
 | Cache | Redis (`cache.nextcloud.host:port`) |
 | Antivirus | ClamAV ICAP (`clamav-icap:1344` or `clamav-simple:1344`) |
-| SMTP | Postfix (`postfix.<namespace>.svc:587`, STARTTLS) |
+| SMTP | Postfix (`postfix.&lt;namespace>.svc:587`, STARTTLS) |
 | License | AGPL-3.0 |
 | Config | `databases.nextcloud.*`, `cache.nextcloud.*`, `functional.filestore.*`, `helmfile/apps/nextcloud/values-nextcloud.yaml.gotmpl` |
 | Chart | Upstream `nextcloud-aio` (OCI registry: `opencode.de`) |
@@ -292,15 +292,15 @@ Nextcloud SHALL integrate with the Nubus central navigation bar.
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.9% (43.2 min downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <200ms (file list/UI) | Nextcloud AIO metrics exporter |
-| **Latency (P95)** | <500ms (file upload 10MB) | Upload completion time |
-| **Latency (P95)** | <300ms (file download) | Download throughput metrics |
-| **Error Rate** | <0.1% (HTTP 5xx) | Nginx access log analysis |
-| **Storage Latency** | <100ms (S3 object get) | MinIO/Ceph performance metrics |
+| **Latency (P95)** | &lt;200ms (file list/UI) | Nextcloud AIO metrics exporter |
+| **Latency (P95)** | &lt;500ms (file upload 10MB) | Upload completion time |
+| **Latency (P95)** | &lt;300ms (file download) | Download throughput metrics |
+| **Error Rate** | &lt;0.1% (HTTP 5xx) | Nginx access log analysis |
+| **Storage Latency** | &lt;100ms (S3 object get) | MinIO/Ceph performance metrics |
 
 **Alerts**:
 - Nextcloud 5xx error rate >0.5% for 5 minutes → P1 alert
-- File upload success rate <99% for 10 minutes → P2 alert
+- File upload success rate &lt;99% for 10 minutes → P2 alert
 - Database connection failures >3 in 5 minutes → P1 alert
 - Disk usage >85% → P3 alert
 - Notify Push WebSocket disconnection rate >10% → P3 alert

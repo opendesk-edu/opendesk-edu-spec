@@ -2,7 +2,7 @@
 title: "Disaster Recovery Runbook"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -149,7 +149,7 @@ curl -sk "https://ox.opendesk.hrz.uni-marburg.de/appsuite/api" -o /dev/null -w "
 ```bash
 # For each service, verify:
 # 1. Pod is Running: kubectl get pods -l app=<service>
-# 2. Health probe passes: kubectl describe pod <pod> | grep -A5 Liveness
+# 2. Health probe passes: kubectl describe pod &lt;pod> | grep -A5 Liveness
 # 3. Ingress responds: curl -sk -o /dev/null -w "%{http_code}" https://<service>.opendesk.hrz.uni-marburg.de/
 ```
 
@@ -163,8 +163,8 @@ RWX PVCs are backed up daily via k8up to `s3:https://s3.hrz.uni-marburg.de/backu
 
 1. List available snapshots: `restic -r s3:https://s3.hrz.uni-marburg.de/backups snapshots --tag k8up`
 2. Find snapshot for target PVC by date/tag
-3. Restore to temp directory: `restic -r s3:https://s3.hrz.uni-marburg.de/backups restore <snapshot> --target /tmp/restore`
-4. Copy restored data to the PVC: `kubectl cp /tmp/restore/<pvc-name>/ <namespace>/<pod>:/data/`
+3. Restore to temp directory: `restic -r s3:https://s3.hrz.uni-marburg.de/backups restore &lt;snapshot> --target /tmp/restore`
+4. Copy restored data to the PVC: `kubectl cp /tmp/restore/&lt;pvc-name>/ &lt;namespace>/&lt;pod>:/data/`
 
 ### RWO PVC Recovery (NOT backed up by k8up)
 

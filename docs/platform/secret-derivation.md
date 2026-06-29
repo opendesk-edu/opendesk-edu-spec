@@ -2,7 +2,7 @@
 title: "Secret Derivation and Password Management"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SP-License-Identifier: Apache-2.0
 -->

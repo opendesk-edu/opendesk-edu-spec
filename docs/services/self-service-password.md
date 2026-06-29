@@ -2,7 +2,7 @@
 title: "Self-Service Password (LTB SSP)"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -135,9 +135,9 @@ Nubus Portal (tile), Keycloak (validates against LDAP on each login)
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <300ms (page load) | Apache access log analysis |
-| **Latency (P95)** | <500ms (password reset operation) | LDAP bind metrics |
-| **Error Rate** | <1% (HTTP 5xx) | Apache access log analysis |
+| **Latency (P95)** | &lt;300ms (page load) | Apache access log analysis |
+| **Latency (P95)** | &lt;500ms (password reset operation) | LDAP bind metrics |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Apache access log analysis |
 | **LDAP Bind Success** | >99% (current password validation) | LDAP access log |
 
 **Alerts**:

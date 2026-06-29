@@ -2,7 +2,7 @@
 title: "Collabora Online"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -149,7 +149,7 @@ app settings endpoint.
 #### Scenario: Remote font configuration
 - GIVEN `remote_font_config.url` pointing to Nextcloud RichDocuments
 - WHEN Collabora starts
-- THEN it fetches the font list JSON from `https://<nextcloud>/apps/richdocuments/settings/fonts.json`
+- THEN it fetches the font list JSON from `https://&lt;nextcloud>/apps/richdocuments/settings/fonts.json`
 - AND available fonts match those configured in Nextcloud
 
 ### Requirement: TLS termination at ingress
@@ -213,9 +213,9 @@ Nextcloud (WOPI delegate, RichDocuments app, font config), OpenCloud (WOPI deleg
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.5% (3.6 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (document open) | Collabora metrics |
-| **Latency (P95)** | <200ms (WOPI request) | WOPI endpoint metrics |
-| **Error Rate** | <0.5% (HTTP 5xx) | Collabora access logs |
+| **Latency (P95)** | &lt;500ms (document open) | Collabora metrics |
+| **Latency (P95)** | &lt;200ms (WOPI request) | WOPI endpoint metrics |
+| **Error Rate** | &lt;0.5% (HTTP 5xx) | Collabora access logs |
 | **Concurrent Editors** | 50 per document (max) | Collabora session metrics |
 
 **Alerts**:

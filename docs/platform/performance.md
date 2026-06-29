@@ -2,7 +2,7 @@
 title: "Performance & SLA"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -26,43 +26,43 @@ SLOs define the acceptable performance boundaries per service tier:
 
 | Tier | Service Types | Availability | Latency (P95) | Error Rate |
 |------|---------------|-------------|----------------|------------|
-| **Critical** | IdP, databases, file storage | 99.9% | <100ms | <0.1% |
-| **High** | Portal, core services | 99.5% | <250ms | <0.5% |
-| **Standard** | LMS, collaboration tools | 99.0% | <500ms | <1.0% |
+| **Critical** | IdP, databases, file storage | 99.9% | &lt;100ms | &lt;0.1% |
+| **High** | Portal, core services | 99.5% | &lt;250ms | &lt;0.5% |
+| **Standard** | LMS, collaboration tools | 99.0% | &lt;500ms | &lt;1.0% |
 | **Low** | Supporting tools | TBD | TBD | TBD |
 
 ### Critical Tier SLOs
 
 | Service | Availability Target | Latency Target (P95) | Error Rate Target |
 |---------|---------------------|----------------------|-------------------|
-| Keycloak | 99.9% | <100ms | <0.1% |
-| PostgreSQL | 99.9% | <50ms (query) | <0.1% |
-| MariaDB | 99.9% | <50ms (query) | <0.1% |
-| Redis | 99.9% | <10ms (cache hit) | <0.1% |
-| MinIO/S3 | 99.9% | <100ms (object get) | <0.1% |
+| Keycloak | 99.9% | &lt;100ms | &lt;0.1% |
+| PostgreSQL | 99.9% | &lt;50ms (query) | &lt;0.1% |
+| MariaDB | 99.9% | &lt;50ms (query) | &lt;0.1% |
+| Redis | 99.9% | &lt;10ms (cache hit) | &lt;0.1% |
+| MinIO/S3 | 99.9% | &lt;100ms (object get) | &lt;0.1% |
 
 ### High Tier SLOs
 
 | Service | Availability Target | Latency Target (P95) | Error Rate Target |
 |---------|---------------------|----------------------|-------------------|
-| Nubus Portal | 99.5% | <200ms | <0.5% |
-| Intercom Service | 99.5% | <150ms | <0.5% |
-| Nextcloud | 99.5% | <250ms | <0.5% |
-| OpenCloud | 99.5% | <200ms | <0.5% |
-| OX AppSuite | 99.5% | <250ms (IMAP) | <0.5% |
-| SOGo | 99.5% | <250ms (IMAP) | <0.5% |
-| Element | 99.5% | <300ms (sync) | <0.5% |
+| Nubus Portal | 99.5% | &lt;200ms | &lt;0.5% |
+| Intercom Service | 99.5% | &lt;150ms | &lt;0.5% |
+| Nextcloud | 99.5% | &lt;250ms | &lt;0.5% |
+| OpenCloud | 99.5% | &lt;200ms | &lt;0.5% |
+| OX AppSuite | 99.5% | &lt;250ms (IMAP) | &lt;0.5% |
+| SOGo | 99.5% | &lt;250ms (IMAP) | &lt;0.5% |
+| Element | 99.5% | &lt;300ms (sync) | &lt;0.5% |
 
 ### Standard Tier SLOs
 
 | Service | Availability Target | Latency Target (P95) | Error Rate Target |
 |---------|---------------------|----------------------|-------------------|
-| ILIAS | 99.0% | <500ms (page load) | <1.0% |
-| Moodle | 99.0% | <500ms (page load) | <1.0% |
-| BigBlueButton | 99.0% | <1000ms (session setup) | <1.0% |
-| Jitsi | 99.0% | <1000ms (room join) | <1.0% |
-| Collabora | 99.0% | <800ms (document load) | <1.0% |
-| XWiki | 99.0% | <500ms (page load) | <1.0% |
+| ILIAS | 99.0% | &lt;500ms (page load) | &lt;1.0% |
+| Moodle | 99.0% | &lt;500ms (page load) | &lt;1.0% |
+| BigBlueButton | 99.0% | &lt;1000ms (session setup) | &lt;1.0% |
+| Jitsi | 99.0% | &lt;1000ms (room join) | &lt;1.0% |
+| Collabora | 99.0% | &lt;800ms (document load) | &lt;1.0% |
+| XWiki | 99.0% | &lt;500ms (page load) | &lt;1.0% |
 
 ## Service Level Indicators (SLIs)
 
@@ -73,22 +73,22 @@ SLIs are the metrics used to measure SLO compliance across the platform.
 | SLI | Metric | Target | Monitoring |
 |-----|--------|--------|------------|
 | **Availability** | Uptime % over 30 days | 99.5%+ (Critical), 99.0%+ (Standard) | Prometheus uptime |
-| **Latency** | Request duration (P95) | <500ms (Critical), <1s (Standard) | ServiceMonitor histograms |
-| **Error Rate** | HTTP 5xx % over 24h | <0.5% (Critical), <1.0% (Standard) | ServiceMonitor error counts |
-| **Database Response** | Query duration (P95) | <100ms | Database exporter |
+| **Latency** | Request duration (P95) | &lt;500ms (Critical), &lt;1s (Standard) | ServiceMonitor histograms |
+| **Error Rate** | HTTP 5xx % over 24h | &lt;0.5% (Critical), &lt;1.0% (Standard) | ServiceMonitor error counts |
+| **Database Response** | Query duration (P95) | &lt;100ms | Database exporter |
 | **Cache Hit Rate** | Redis cache hit % | >80% | Redis exporter |
-| **Disk Usage** | PVC usage % | <80% | Node Exporter + Prometheus Rules |
+| **Disk Usage** | PVC usage % | &lt;80% | Node Exporter + Prometheus Rules |
 
 ### Service-Specific SLIs
 
 | Service | Key Metrics | Target | Alert Threshold |
 |---------|-------------|--------|-----------------|
-| Keycloak | Token issuance latency (P95) | <100ms | >200ms: Warning |
-| PostgreSQL | Query latency (P95) | <50ms | >100ms: Warning |
-| Nextcloud | File upload latency (average) | <2s (100MB files) | >5s: Warning |
-| Collabora | Document conversion time | <30s (10-page doc) | >60s: Warning |
-| Jitsi | Room join latency | <1000ms | >2000ms: Warning |
-| Element | Sync latency (message → client) | <500ms | >1s: Warning |
+| Keycloak | Token issuance latency (P95) | &lt;100ms | >200ms: Warning |
+| PostgreSQL | Query latency (P95) | &lt;50ms | >100ms: Warning |
+| Nextcloud | File upload latency (average) | &lt;2s (100MB files) | >5s: Warning |
+| Collabora | Document conversion time | &lt;30s (10-page doc) | >60s: Warning |
+| Jitsi | Room join latency | &lt;1000ms | >2000ms: Warning |
+| Element | Sync latency (message → client) | &lt;500ms | >1s: Warning |
 
 ## Performance Baselines
 
@@ -144,7 +144,7 @@ scaled. Use manual replica count increase in `replicas.yaml.gotmpl`.
 | MariaDB CPU Usage | >70% | >90% | Email (Warning) + Teams channel |
 | Kubernetes Disk Usage | >80% (PVC) | >95% (PVC) | Email + Teams channel |
 | Nextcloud File Upload Latency | >5s (P95) | >10s (P95) | Email (Warning) |
-| Redis Cache Hit Rate | <70% | <60% | Email (Warning) |
+| Redis Cache Hit Rate | &lt;70% | &lt;60% | Email (Warning) |
 
 ## Depends On
 

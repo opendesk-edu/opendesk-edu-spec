@@ -2,7 +2,7 @@
 title: "Deployment Orchestration"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -27,7 +27,7 @@ The platform SHALL be deployable with a single command.
 
 #### Scenario: Fresh deployment
 - GIVEN a configured Kubernetes cluster with Helm 3.17.3+, Helmfile 1.0.0+, HelmDiff 3.11.0+
-- WHEN an operator runs `helmfile -e <environment> apply`
+- WHEN an operator runs `helmfile -e &lt;environment> apply`
 - THEN all releases are deployed in dependency order
 - AND no manual intervention is required between releases
 

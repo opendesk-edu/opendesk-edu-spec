@@ -108,8 +108,8 @@ Every service specification includes these five sections:
 | Metric | Target |
 |--------|--------|
 | Availability | 99.9% (43.2 min downtime/month) |
-| Latency P95 | <200ms |
-| Error Rate | <0.1% |
+| Latency P95 | &lt;200ms |
+| Error Rate | &lt;0.1% |
 | Capacity | 5,000 concurrent users |
 ```
 

@@ -2,7 +2,7 @@
 title: "Notes (im.press)"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -79,7 +79,7 @@ Notes SHALL send email notifications for shared notes and mentions.
 - GIVEN a user sharing a note
 - WHEN the share is created
 - THEN Notes sends an email via Postfix (port 25)
-- AND the sender is `no-reply@<mailDomain>`
+- AND the sender is `no-reply@&lt;mailDomain>`
 - AND the brand name is "openDesk"
 
 ### Requirement: S3 note attachments
@@ -139,9 +139,9 @@ Nubus Portal (tile, OIDC redirect), Postfix (email notifications), MinIO (note a
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <400ms (note load) | Nginx access log analysis |
-| **Latency (P95)** | <200ms (real-time sync) | Yjs WebSocket metrics |
-| **Error Rate** | <1% (HTTP 5xx) | Nginx access log analysis |
+| **Latency (P95)** | &lt;400ms (note load) | Nginx access log analysis |
+| **Latency (P95)** | &lt;200ms (real-time sync) | Yjs WebSocket metrics |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Nginx access log analysis |
 | **AI Service Success** | >95% (when configured) | AI endpoint metrics |
 
 **Alerts**:

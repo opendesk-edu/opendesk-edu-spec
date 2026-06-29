@@ -2,7 +2,7 @@
 title: "Jitsi"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -229,9 +229,9 @@ headless recording). All other capabilities SHALL be dropped.
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.5% (3.6 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <300ms (meeting join) | Jitsi Videobridge metrics |
+| **Latency (P95)** | &lt;300ms (meeting join) | Jitsi Videobridge metrics |
 | **Connection Success** | >98% (WebRTC handshake) | Prosody connection logs |
-| **Media Quality** | <2% packet loss | WebRTC statistics API |
+| **Media Quality** | &lt;2% packet loss | WebRTC statistics API |
 | **Recording Success** | >95% (Jibri recordings) | Jibri completion logs |
 
 **Alerts**:

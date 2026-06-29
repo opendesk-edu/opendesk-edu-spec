@@ -2,7 +2,7 @@
 title: "Nubus (IAM + Portal)"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -182,10 +182,10 @@ All services via OIDC/SAML (Keycloak clients/SP entities), OX Connector (UMS RES
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.9% (43.2 min downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <100ms (OIDC token issuance) | Prometheus histogram from Keycloak metrics |
-| **Latency (P95)** | <50ms (LDAP bind) | OpenLDAP access log analysis |
-| **Error Rate** | <0.1% (authentication failures) | Failed login ratio vs total attempts |
-| **Portal Response** | <200ms (P95) | Portal frontend performance metrics |
+| **Latency (P95)** | &lt;100ms (OIDC token issuance) | Prometheus histogram from Keycloak metrics |
+| **Latency (P95)** | &lt;50ms (LDAP bind) | OpenLDAP access log analysis |
+| **Error Rate** | &lt;0.1% (authentication failures) | Failed login ratio vs total attempts |
+| **Portal Response** | &lt;200ms (P95) | Portal frontend performance metrics |
 
 **Alerts**:
 - Keycloak OIDC endpoint error rate >1% for 5 minutes → P2 alert

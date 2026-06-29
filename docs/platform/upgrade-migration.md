@@ -2,7 +2,7 @@
 title: "Upgrade and Migration"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -32,9 +32,9 @@ same pattern: update image tags in values, run `helmfile sync`, verify.
 
 #### Scenario: Upgrade a single service
 
-1. Update image tag in `apps/<service>/values.yaml.gotmpl`
+1. Update image tag in `apps/&lt;service>/values.yaml.gotmpl`
 2. Verify upgrade notes from upstream chart changelog
-3. Run `helmfile -e <environment> -f helmfile.yaml.gotmpl sync`
+3. Run `helmfile -e &lt;environment> -f helmfile.yaml.gotmpl sync`
 4. Verify pods are running and healthy
 5. Run post-upgrade smoke tests
 
@@ -87,15 +87,15 @@ Image tags SHOULD be pinned to specific versions in production.
 ### Nextcloud (AIO)
 
 #### Pre-upgrade
-1. Enable maintenance mode: `kubectl exec -n opendesk <pod> -- php occ maintenance:mode --on`
-2. Back up database: `kubectl exec -n opendesk <postgres-pod> -- pg_dump -Fc nextcloud > nc.dump`
+1. Enable maintenance mode: `kubectl exec -n opendesk &lt;pod> -- php occ maintenance:mode --on`
+2. Back up database: `kubectl exec -n opendesk &lt;postgres-pod> -- pg_dump -Fc nextcloud > nc.dump`
 3. Back up S3 data (verify k8up snapshot exists)
 
 #### Upgrade
 1. Update Nextcloud image tag
 2. Run `helmfile sync`
-3. Run upgrade via AIO: `kubectl exec -n opendesk <pod> -- php occ upgrade`
-4. Disable maintenance mode: `kubectl exec -n opendesk <pod> -- php occ maintenance:mode --off`
+3. Run upgrade via AIO: `kubectl exec -n opendesk &lt;pod> -- php occ upgrade`
+4. Disable maintenance mode: `kubectl exec -n opendesk &lt;pod> -- php occ maintenance:mode --off`
 
 #### Post-upgrade
 1. Verify `/status.php` returns healthy
@@ -167,7 +167,7 @@ helm rollback <release> <revision> --namespace opendesk
 ### Database Rollback
 
 1. Stop application pods to prevent writes
-2. Restore from backup dump: `pg_restore -d <db> <backup_file>`
+2. Restore from backup dump: `pg_restore -d &lt;db> &lt;backup_file>`
 3. Restart application pods
 4. Verify data integrity
 

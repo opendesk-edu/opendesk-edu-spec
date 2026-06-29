@@ -1,12 +1,12 @@
 ---
 title: 🌄 Interactive Landscape
 sidebar_position: 2
-description: Interactive visual map of the 25 openDesk Edu services with search, filtering, and statistics.
+description: Interactive visual map of the openDesk Edu services with search, filtering, and statistics.
 ---
 
 # 🌄 Interactive Landscape
 
-Explore the complete openDesk Edu ecosystem through our interactive landscape visualization. Browse, search, and filter all 25 integrated services.
+Explore the complete openDesk Edu ecosystem through our interactive landscape visualization. Browse, search, and filter all integrated services.
 
 <div style={{
   position: 'relative',

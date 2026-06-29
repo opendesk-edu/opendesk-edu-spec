@@ -2,7 +2,7 @@
 title: "BigBlueButton (Greenlight v3)"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -55,8 +55,8 @@ with SP-initiated SSO through Keycloak.
 #### Scenario: BoldChat SAML provider
 - GIVEN the BoldChat SAML configuration enabled
 - THEN the SAML provider label is "OpenDesk Login"
-- AND the SSO target URL is `https://id.opendesk.<domain>/realms/opendesk/protocol/saml`
-- AND the SP entity ID is `https://bbb.opendesk.<domain>/shibboleth`
+- AND the SSO target URL is `https://id.opendesk.&lt;domain>/realms/opendesk/protocol/saml`
+- AND the SP entity ID is `https://bbb.opendesk.&lt;domain>/shibboleth`
 - AND SLO (Single Logout) is configured via Keycloak SAML endpoint
 - AND allowed clock drift is 120 seconds
 - AND SAML certificates are mounted from `/etc/shibboleth/shib-cert.pem` and `shib-key.pem`
@@ -186,7 +186,7 @@ Nubus Portal (tile, SSO redirect), Keycloak (SAML 2.0), BBB backend (meeting API
 | License | LGPL-3.0 |
 | Config | `databases.bbb.*`, `helmfile/apps/bigbluebutton/values.yaml.gotmpl` |
 | Chart | `helmfile/charts/bigbluebutton/` (local chart) |
-| Image | `ghcr.io/<your-org>/greenlight-saml:v1.3.0` (custom Shibboleth image) |
+| Image | `ghcr.io/&lt;your-org>/greenlight-saml:v1.3.0` (custom Shibboleth image) |
 | Replicas | 2 (default) |
 | Resources | 250m-1000m CPU, 512Mi-1Gi memory |
 | Health | TCP port 80 (liveness: 30s/10s, readiness: 5s/5s) |
@@ -200,9 +200,9 @@ Nubus Portal (tile, SSO redirect), Keycloak (SAML 2.0), BBB backend (meeting API
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.5% (3.6 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (Greenlight page load) | Apache access log analysis |
-| **Latency (P95)** | <1s (room creation) | Greenlight API metrics |
-| **Error Rate** | <0.5% (HTTP 5xx) | Apache access log analysis |
+| **Latency (P95)** | &lt;500ms (Greenlight page load) | Apache access log analysis |
+| **Latency (P95)** | &lt;1s (room creation) | Greenlight API metrics |
+| **Error Rate** | &lt;0.5% (HTTP 5xx) | Apache access log analysis |
 | **SSO Success** | >99% (Shibboleth auth) | Keycloak event log |
 
 **Alerts**:

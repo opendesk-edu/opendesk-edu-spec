@@ -2,7 +2,7 @@
 title: "OpenProject"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -246,9 +246,9 @@ university deployment settings.
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.5% (3.6 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (page load) | Nginx access log analysis |
-| **Latency (P95)** | <1s (work package update) | OpenProject API response metrics |
-| **Error Rate** | <0.5% (HTTP 5xx) | Nginx access log analysis |
+| **Latency (P95)** | &lt;500ms (page load) | Nginx access log analysis |
+| **Latency (P95)** | &lt;1s (work package update) | OpenProject API response metrics |
+| **Error Rate** | &lt;0.5% (HTTP 5xx) | Nginx access log analysis |
 | **Cache Hit Rate** | >80% (Memcached) | Memcached metrics |
 
 **Alerts**:

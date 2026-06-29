@@ -2,7 +2,7 @@
 title: "Moodle"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -51,8 +51,8 @@ Apache in the same container.
 
 #### Scenario: Shibboleth SP configuration
 - GIVEN Moodle deployed with Shibboleth SP enabled
-- THEN the SP entity ID is `https://moodle.opendesk.<domain>/shibboleth`
-- AND the IdP metadata URL is `https://id.opendesk.<domain>/realms/opendesk/protocol/saml/descriptor`
+- THEN the SP entity ID is `https://moodle.opendesk.&lt;domain>/shibboleth`
+- AND the IdP metadata URL is `https://id.opendesk.&lt;domain>/realms/opendesk/protocol/saml/descriptor`
 - AND SP configuration is mounted from:
   - ConfigMap `moodle-shibboleth-sp-config` → `/etc/shibboleth` (read-only)
   - Secret `moodle-shibboleth-sp-secret` → `/etc/shibboleth/certs` (read-only)
@@ -191,7 +191,7 @@ Nubus Portal (tile, SSO redirect), Provisioning API (semester course provisionin
 | License | GPL-3.0 |
 | Config | `databases.moodle.*`, `persistence.storages.moodle.*`, `helmfile/apps/moodle/values.yaml.gotmpl` |
 | Chart | `helmfile/charts/moodle/` (local chart) |
-| Image | `ghcr.io/<your-org>/moodle-shib:v1.0.0` (custom Shibboleth image) |
+| Image | `ghcr.io/&lt;your-org>/moodle-shib:v1.0.0` (custom Shibboleth image) |
 | Replicas | 2 (default) |
 | Resources | 500m-2 CPU, 1Gi-2Gi memory |
 | Security | `runAsUser: 1001`, `capabilities: drop ALL`, `seccompProfile: RuntimeDefault` |
@@ -207,9 +207,9 @@ Nubus Portal (tile, SSO redirect), Provisioning API (semester course provisionin
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.5% (3.6 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (page load) | Apache access log analysis |
-| **Latency (P95)** | <1s (quiz submission) | PHP-FPM response time metrics |
-| **Error Rate** | <0.5% (HTTP 5xx) | Apache access log analysis |
+| **Latency (P95)** | &lt;500ms (page load) | Apache access log analysis |
+| **Latency (P95)** | &lt;1s (quiz submission) | PHP-FPM response time metrics |
+| **Error Rate** | &lt;0.5% (HTTP 5xx) | Apache access log analysis |
 | **SSO Success** | >99% (Shibboleth auth) | Keycloak event log |
 
 **Alerts**:

@@ -2,7 +2,7 @@
 title: "OpenCloud (Alternative to Nextcloud)"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -194,14 +194,14 @@ OX AppSuite (WebDAV file access via Intercom), Nubus Portal (tile), Collabora (W
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.9% (43.2 min downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <200ms (file list/UI) | OpenCloud metrics |
-| **Latency (P95)** | <500ms (file upload 10MB) | Upload completion time |
-| **Latency (P95)** | <300ms (file download) | Download throughput metrics |
-| **Error Rate** | <0.1% (HTTP 5xx) | Nginx access log analysis |
+| **Latency (P95)** | &lt;200ms (file list/UI) | OpenCloud metrics |
+| **Latency (P95)** | &lt;500ms (file upload 10MB) | Upload completion time |
+| **Latency (P95)** | &lt;300ms (file download) | Download throughput metrics |
+| **Error Rate** | &lt;0.1% (HTTP 5xx) | Nginx access log analysis |
 
 **Alerts**:
 - OpenCloud 5xx error rate >0.5% for 5 minutes → P1 alert
-- File upload success rate <99% for 10 minutes → P2 alert
+- File upload success rate &lt;99% for 10 minutes → P2 alert
 - Database connection failures >3 in 5 minutes → P1 alert
 - Disk usage >85% → P3 alert
 - CephFS mount failures >3 in 5 minutes → P1 alert

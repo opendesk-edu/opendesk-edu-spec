@@ -2,7 +2,7 @@
 title: "XWiki"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -15,7 +15,7 @@ Knowledge management and wiki platform with OIDC authentication, LDAP group
 synchronization, and PostgreSQL or MariaDB backend. Supports multi-wiki
 setups, LDAP profile picture sync, group-based access control, and optional
 Collabora ODT/DOCX export (enterprise). The page title follows the pattern
-"Wissen - $docTitle - <productName>".
+"Wissen - $docTitle - &lt;productName>".
 
 XWiki uses a dual authentication strategy: OIDC for user login via Keycloak,
 and LDAP for group synchronization and user import. OIDC and LDAP users are
@@ -116,7 +116,7 @@ XWiki SHALL send email notifications via Postfix (port 587, STARTTLS).
 - GIVEN a user subscribed to page notifications
 - WHEN a page is modified
 - THEN XWiki sends a notification email via Postfix
-- AND the sender address is `no-reply@<mailDomain>`
+- AND the sender address is `no-reply@&lt;mailDomain>`
 - AND email grace time is 5 seconds (`notifications.emails.live.graceTime: 5`)
 
 ### Requirement: Database flexibility (PostgreSQL or MariaDB)
@@ -140,7 +140,7 @@ XWiki SHALL support enterprise-specific features when `OPENDESK_ENTERPRISE=true`
 
 #### Scenario: Enterprise license
 - GIVEN enterprise keys configured
-- THEN Java opts include `-Dlicenses=<openDesk>,<proApplications>`
+- THEN Java opts include `-Dlicenses=&lt;openDesk>,&lt;proApplications>`
 - AND the enterprise UI flavor is used
 
 #### Scenario: Collabora ODT/DOCX export
@@ -174,9 +174,9 @@ Nubus Portal (central navigation, tile), Intercom Service (newsfeed), OpenLDAP (
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <500ms (page load) | Tomcat access log analysis |
-| **Latency (P95)** | <300ms (search) | XWiki search metrics |
-| **Error Rate** | <1% (HTTP 5xx) | Tomcat access log analysis |
+| **Latency (P95)** | &lt;500ms (page load) | Tomcat access log analysis |
+| **Latency (P95)** | &lt;300ms (search) | XWiki search metrics |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Tomcat access log analysis |
 | **SSO Success** | >99% (OIDC auth) | Keycloak event log |
 
 **Alerts**:
@@ -229,4 +229,4 @@ Nubus Portal (central navigation, tile), Intercom Service (newsfeed), OpenLDAP (
 | Java Opts | Custom (license keys, self-signed CA truststore) |
 | Theme | Flamingo Themes Iceberg, brand-primary color |
 | Replicas | `replicas.xwiki` (default 1) |
-| LDAP bind | `uid=ldapsearch_xwiki,cn=users,<baseDn>`, `groupcache_expiration: 300` |
+| LDAP bind | `uid=ldapsearch_xwiki,cn=users,&lt;baseDn>`, `groupcache_expiration: 300` |

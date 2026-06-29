@@ -2,7 +2,7 @@
 title: "CryptPad"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -99,7 +99,7 @@ and ensure only authenticated Nextcloud users can access pads.
 - WHEN users edit simultaneously
 - THEN changes are synchronized via WebSocket (`ws://cryptpad/cryptpad_websocket`)
 - AND Operational Transformation (OT) algorithm handles concurrent edits
-- AND each user sees changes in real-time (< 200ms latency)
+- AND each user sees changes in real-time (&lt; 200ms latency)
 - AND cursor positions are synchronized across users
 
 ### Requirement: Stateless storage
@@ -266,8 +266,8 @@ CryptPad SHALL integrate with Nubus Portal for centralized navigation.
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <400ms (pad load) | Nginx access log analysis |
-| **Error Rate** | <1% (HTTP 5xx) | Nginx access log analysis |
+| **Latency (P95)** | &lt;400ms (pad load) | Nginx access log analysis |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Nginx access log analysis |
 | **E2E Encryption** | 100% (server cannot read content) | Architecture guarantee |
 
 **Alerts**:

@@ -2,7 +2,7 @@
 title: "BookStack"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -174,9 +174,9 @@ Nubus Portal (tile, role mapping `bookstack-editor`)
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <400ms (page load) | Apache access log analysis |
-| **Latency (P95)** | <200ms (search) | BookStack search metrics |
-| **Error Rate** | <1% (HTTP 5xx) | Apache access log analysis |
+| **Latency (P95)** | &lt;400ms (page load) | Apache access log analysis |
+| **Latency (P95)** | &lt;200ms (search) | BookStack search metrics |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Apache access log analysis |
 | **SSO Success** | >99% (SAML auth) | Keycloak event log |
 
 **Alerts**:

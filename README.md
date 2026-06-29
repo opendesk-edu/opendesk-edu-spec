@@ -5,7 +5,7 @@ SPDX-License-Identifier: Apache-2.0
 
 # openspec.opendesk-edu.org
 
-Interactive OpenSpec documentation for the openDesk Edu ecosystem - 25 integrated open-source services with complete specifications.
+Interactive OpenSpec documentation for the openDesk Edu ecosystem - integrated open-source services with complete specifications.
 
 **Live Site**: https://openspec.opendesk-edu.org
 
@@ -51,7 +51,7 @@ openspec.opendesk-edu.org/
 │   ├── methodology.md        # Spec methodology
 │   ├── quickstart.md          # Getting started
 │   ├── landscape.md           # Embedded landscape
-│   ├── services/              # 25 service specs (imported)
+│   ├── services/              # Service specs (imported)
 │   ├── platform/              # 17 platform specs (imported)
 │   ├── integrations/          # 6 integration specs (imported)
 │   ├── registry/              # Registry documents (imported)

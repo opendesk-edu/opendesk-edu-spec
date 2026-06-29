@@ -2,7 +2,7 @@
 title: "Planka"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -91,7 +91,7 @@ Planka SHALL store all content (boards, lists, cards, attachments, audit logs) i
 PostgreSQL (NOT blob storage).
 
 Attachments are stored as PostgreSQL BLOB objects (acceptable for small files
-<10MB).
+&lt;10MB).
 
 #### Scenario: Content persistence
 - GIVEN a Planka deployment with PostgreSQL
@@ -144,7 +144,7 @@ This is optional and requires LTI configuration.
 ## Known Quirks
 
 - **Attachments in PostgreSQL**: Planka stores uploaded files as BLOB objects in
-  PostgreSQL (not in S3). This is acceptable for small attachments (<10MB).
+  PostgreSQL (not in S3). This is acceptable for small attachments (&lt;10MB).
 - **LTI shared users**: LTI launches create a single shared LTI user in Planka,
   not per-student accounts. This is a limitation of LTI v1.x integration.
 
@@ -176,9 +176,9 @@ This is optional and requires LTI configuration.
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <400ms (board load) | Nginx access log analysis |
-| **Latency (P95)** | <200ms (card drag-and-drop) | Planka API metrics |
-| **Error Rate** | <1% (HTTP 5xx) | Nginx access log analysis |
+| **Latency (P95)** | &lt;400ms (board load) | Nginx access log analysis |
+| **Latency (P95)** | &lt;200ms (card drag-and-drop) | Planka API metrics |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Nginx access log analysis |
 | **LTI Integration** | >98% (ILIAS/Moodle embedding) | LTI launch logs |
 
 **Alerts**:

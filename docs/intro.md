@@ -2,17 +2,17 @@
 slug: /
 title: Introduction
 sidebar_position: 1
-description: Welcome to the openDesk Edu OpenSpec - the complete specification framework for 25 integrated open-source services.
+description: Welcome to the openDesk Edu OpenSpec - the complete specification framework for integrated open-source services.
 keywords: [openspec, opendesk-edu, education, kubernetes, open-source, specifications]
 ---
 
 # Welcome to the openDesk Edu OpenSpec
 
-The **openDesk Edu OpenSpec** is a complete, machine-verifiable specification framework for the openDesk Edu ecosystem - 25 integrated open-source services designed for European educational institutions.
+The **openDesk Edu OpenSpec** is a complete, machine-verifiable specification framework for the openDesk Edu ecosystem - integrated open-source services designed for European educational institutions.
 
 ## What is openDesk Edu?
 
-openDesk Edu is a comprehensive, production-ready platform that integrates 25 world-class open-source applications into a unified ecosystem. It's not a vendor product - it's an **ecosystem** that orchestrates existing open-source projects while maintaining complete data sovereignty.
+openDesk Edu is a comprehensive, production-ready platform that integrates world-class open-source applications into a unified ecosystem. It's not a vendor product - it's an **ecosystem** that orchestrates existing open-source projects while maintaining complete data sovereignty.
 
 ## What You'll Find Here
 
@@ -34,7 +34,7 @@ This OpenSpec documentation provides:
 
 ## Key Statistics
 
-- **25** Integrated Services
+- **Integrated** Services
 - **5** Main Categories
 - **58** Specification Files
 - **100%** Open Source
@@ -45,7 +45,7 @@ This OpenSpec documentation provides:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  Application Layer (25 Services)                         │
+│  Application Layer (Integrated Services)                  │
 ├─────────────────────────────────────────────────────────┤
 │  Integration Layer (Keycloak SSO, Intercom, WOPI, LTI)  │
 ├─────────────────────────────────────────────────────────┤

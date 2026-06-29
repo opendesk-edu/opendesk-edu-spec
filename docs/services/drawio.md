@@ -2,7 +2,7 @@
 title: "Draw.io (jgraph/drawio)"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-Identifier-Identifier: Apache-2.0
 -->
@@ -267,8 +267,8 @@ external storage integration.
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <300ms (page load) | Nginx access log analysis |
-| **Error Rate** | <1% (HTTP 5xx) | Nginx access log analysis |
+| **Latency (P95)** | &lt;300ms (page load) | Nginx access log analysis |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Nginx access log analysis |
 
 **Alerts**:
 - Draw.io 5xx error rate >2% for 10 minutes → P3 alert

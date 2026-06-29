@@ -2,7 +2,7 @@
 title: "Etherpad"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -163,9 +163,9 @@ Nubus Portal (tile)
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.0% (7.2 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <300ms (pad load) | Nginx access log analysis |
-| **Latency (P95)** | <200ms (OT sync) | Etherpad metrics |
-| **Error Rate** | <1% (HTTP 5xx) | Nginx access log analysis |
+| **Latency (P95)** | &lt;300ms (pad load) | Nginx access log analysis |
+| **Latency (P95)** | &lt;200ms (OT sync) | Etherpad metrics |
+| **Error Rate** | &lt;1% (HTTP 5xx) | Nginx access log analysis |
 | **Concurrent Editors** | 50 per pad (max) | Etherpad socket metrics |
 
 **Alerts**:

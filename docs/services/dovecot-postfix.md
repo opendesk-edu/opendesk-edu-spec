@@ -2,7 +2,7 @@
 title: "Dovecot Postfix Mail Infrastructure"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -200,9 +200,9 @@ Dovecot and Postfix SHALL be healthy and monitorable.
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.9% (43.2 min downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <100ms (IMAP operation) | Dovecot metrics |
-| **Latency (P95)** | <200ms (SMTP delivery) | Postfix metrics |
-| **Error Rate** | <0.1% (delivery failures) | Postfix mail log analysis |
+| **Latency (P95)** | &lt;100ms (IMAP operation) | Dovecot metrics |
+| **Latency (P95)** | &lt;200ms (SMTP delivery) | Postfix metrics |
+| **Error Rate** | &lt;0.1% (delivery failures) | Postfix mail log analysis |
 | **Spam Detection** | >99% (SpamAssassin) | Amavis log analysis |
 
 **Alerts**:

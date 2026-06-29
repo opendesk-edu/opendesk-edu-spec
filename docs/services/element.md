@@ -2,7 +2,7 @@
 title: "Element (Matrix/Synapse)"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -44,7 +44,7 @@ Synapse maps OIDC identity to Matrix user IDs.
 - GIVEN a user accessing Element
 - WHEN the user logs in
 - THEN Element redirects to Keycloak via OIDC
-- AND the Matrix user ID is formatted as `@<opendesk_username>:<domain>`
+- AND the Matrix user ID is formatted as `@&lt;opendesk_username>:&lt;domain>`
 - AND OIDC scopes include `openid` and `opendesk-matrix-scope`
 
 #### Scenario: Logout redirect to portal
@@ -174,7 +174,7 @@ Intercom Service (silent login, navigation, AS pipe), OX AppSuite (messaging AS 
 | App Services | Intercom (`intercom-service`), OX AppSuite (`ox-appsuite`) |
 | Enterprise AS | AdminBot, AuditBot (pipes on port 9995), GroupSync (port 10010) |
 | Presence | Configurable (`functional.dataProtection.matrixPresence.enabled`) |
-| Theme | `title: "Chat - <productName>"`, primary color CSS variables |
+| Theme | `title: "Chat - &lt;productName>"`, primary color CSS variables |
 | Security | Both: `capabilities: drop ALL`, `seccompProfile: RuntimeDefault` |
 
 ## SLO
@@ -184,7 +184,7 @@ Intercom Service (silent login, navigation, AS pipe), OX AppSuite (messaging AS 
 | Metric | Target | Measurement |
 |--------|--------|-------------|
 | **Availability** | 99.5% (3.6 hours downtime/month max) | Uptime over 30-day window |
-| **Latency (P95)** | <300ms (message delivery) | Synapse metrics |
+| **Latency (P95)** | &lt;300ms (message delivery) | Synapse metrics |
 | **Connection Success** | >98% (WebSocket) | Synapse connection logs |
 | **Message Delivery** | >99% (within 5 seconds) | Federation/send queue metrics |
 | **Federation Success** | >95% (external homeservers) | Federation transaction logs |

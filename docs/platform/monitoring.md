@@ -2,7 +2,7 @@
 title: "Monitoring and Alerting"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -50,14 +50,14 @@ Services ──metrics──> Prometheus ──rules──> Alertmanager ──>
 
 | Service | Availability | Latency (p95) | Error Rate |
 |---------|-------------|---------------|------------|
-| Keycloak | 99.9% | < 500ms (token endpoint) | < 0.1% |
-| Nextcloud/OpenCloud | 99.9% | < 2s (file operations) | < 0.5% |
-| OX AppSuite/SOGo | 99.9% | < 3s (mail operations) | < 0.5% |
-| Element | 99.5% | < 500ms (API) | < 1% |
-| ILIAS/Moodle | 99.5% | < 3s (page load) | < 1% |
-| BigBlueButton | 99.5% | < 1s (UI actions) | < 1% |
-| Collabora | 99.5% | < 5s (document load) | < 1% |
-| All other services | 99% | < 5s | < 2% |
+| Keycloak | 99.9% | &lt; 500ms (token endpoint) | &lt; 0.1% |
+| Nextcloud/OpenCloud | 99.9% | &lt; 2s (file operations) | &lt; 0.5% |
+| OX AppSuite/SOGo | 99.9% | &lt; 3s (mail operations) | &lt; 0.5% |
+| Element | 99.5% | &lt; 500ms (API) | &lt; 1% |
+| ILIAS/Moodle | 99.5% | &lt; 3s (page load) | &lt; 1% |
+| BigBlueButton | 99.5% | &lt; 1s (UI actions) | &lt; 1% |
+| Collabora | 99.5% | &lt; 5s (document load) | &lt; 1% |
+| All other services | 99% | &lt; 5s | &lt; 2% |
 
 ---
 
@@ -74,7 +74,7 @@ Services ──metrics──> Prometheus ──rules──> Alertmanager ──>
 | CephClusterError | `ceph_health_status != 0` for 5m | Critical | Immediate |
 | IngressDown | `up{job="haproxy-ingress"} == 0` for 2m | Critical | Immediate |
 | AllPodsCrashing | `kube_pod_status_phase{phase="Running"} == 0` for any service | Critical | Immediate |
-| CertExpiry | `probe_ssl_earliest_cert_expiry < 7` days | Critical | Within 24h |
+| CertExpiry | `probe_ssl_earliest_cert_expiry &lt; 7` days | Critical | Within 24h |
 
 ### Tier 2: Warning (Investigate within 1 hour)
 
@@ -83,7 +83,7 @@ Services ──metrics──> Prometheus ──rules──> Alertmanager ──>
 | HighMemoryUsage | `container_memory_working_set_bytes > 90%` of limit for 10m | Warning | 1 hour |
 | HighCPUThrottling | `rate(container_cpu_cfs_throttled_periods_total) > 50%` for 10m | Warning | 1 hour |
 | PodRestarting | `rate(kube_pod_container_status_restarts_total) > 0.1` (6+/hour) | Warning | 1 hour |
-| PVCAlmostFull | `kubelet_volume_stats_available_bytes < 10%` of capacity | Warning | 1 hour |
+| PVCAlmostFull | `kubelet_volume_stats_available_bytes &lt; 10%` of capacity | Warning | 1 hour |
 | DatabaseConnectionsHigh | `pg_stat_activity_count > 80%` of max_connections | Warning | 1 hour |
 | BackupFailed | `k8up_backup_failed_total > 0` for latest run | Warning | 1 hour |
 | OIDCAuthFailures | `rate(keycloak_logins_failed_total) > 10/min` for 10m | Warning | 1 hour |
@@ -164,7 +164,7 @@ labels:
 
 | Channel | Use Case | Config |
 |---------|----------|--------|
-| Email | Tier 1 + Tier 2 alerts | SMTP via Postfix (`opendesk-system@<domain>`) |
+| Email | Tier 1 + Tier 2 alerts | SMTP via Postfix (`opendesk-system@&lt;domain>`) |
 | Webhook | Integration with ticketing/Chat | Configured in Alertmanager |
 | Slack/Mattermost (optional) | Tier 2 + Tier 3 | Webhook integration |
 

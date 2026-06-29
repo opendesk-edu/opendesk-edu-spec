@@ -2,7 +2,7 @@
 title: "Backup Strategy for RWO and RWX PVCs"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SP-License-Identifier: Apache-2.0
 -->
@@ -99,7 +99,7 @@ StatefulSet pod, avoiding cross-node mount issues.
 #### Scenario: MariaDB backup validation
 - GIVEN a fresh MariaDB PVC (`mariadb-galera-data`)
 - WHEN restoring from S3 backup `mariadb-backup.sql.gz`
-- THEN `gunzip < mariadb-backup.sql.gz | mysql -u root <mariadb-backup.sql` restores data
+- THEN `gunzip &lt; mariadb-backup.sql.gz | mysql -u root &lt;mariadb-backup.sql` restores data
 - AND restored database matches schema (verified via `mysql -u root -e "SHOW DATABASES;"`)
 - AND all tables contain data (verified via `mysql -u root -e "SELECT count(*) FROM information_schema.tables;"`)
 
@@ -144,7 +144,7 @@ k8up schedules or Ceph CSI snapshots.
 - Then `cephcsi.io/volumesnapshotclass` is configured with `clusterID`
 - And backups are created daily via VolumeSnapshot CR: `kubectl apply -f volumesnapshot.yaml`
 - And snapshots are stored on Ceph RBD SSD pool (`ceph-rbd-ssd` storage class)
-- And retention is managed via Ceph rbd snap schedule: `ceph osd pool ceph-rbd-ssd snap schedule add <pool>`
+- And retention is managed via Ceph rbd snap schedule: `ceph osd pool ceph-rbd-ssd snap schedule add &lt;pool>`
 
 ### Requirement: Backup target configuration
 

@@ -2,7 +2,7 @@
 title: "OpenProject-Nextcloud File Store Integration"
 ---
 
-<!--
+&lt;!--
 SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -147,7 +147,7 @@ Content-Type: application/vnd.api+json
 }
 ```
 
-### GET /api/v3/storages/{id}/files (List Files)
+### GET /api/v3/storages/`{id}`/files (List Files)
 
 Lists files available from the Nextcloud storage for a project.
 
@@ -175,7 +175,7 @@ Authorization: Bearer <opaque-admin-token>
 }
 ```
 
-### POST /api/v3/projects/{id}/file_links (Attach File)
+### POST /api/v3/projects/`{id}`/file_links (Attach File)
 
 Links a Nextcloud file to an OpenProject work package.
 
