@@ -1,0 +1,20 @@
+image: node:20
+
+stages:
+  - build
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
