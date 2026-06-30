@@ -6,9 +6,7 @@ services:
     ports:
       - "3000:80"
     volumes:
-      - ../specs:/app/specs-repo/specs:ro
-      - ../METADATA.yml:/app/specs-repo/METADATA.yml:ro
-      - ../METHODOLOGY.md:/app/specs-repo/METHODOLOGY.md:ro
+      - ../specs:/app/specs:ro
     restart: unless-stopped
 
   dev:
@@ -17,12 +15,7 @@ services:
       dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
-      - "3001:3001"
     volumes:
       - .:/app
-      - ../specs:/app/specs-repo/specs:ro
-      - ../METADATA.yml:/app/specs-repo/METADATA.yml:ro
-      - ../METHODOLOGY.md:/app/specs-repo/METHODOLOGY.md:ro
-    environment:
-      - LOCAL_DEVELOPMENT=true
+      - ../specs:/app/specs:ro
     command: npm run start -- --host 0.0.0.0

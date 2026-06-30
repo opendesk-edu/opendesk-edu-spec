@@ -5,7 +5,6 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'OpenSpec | openDesk Edu',
   tagline: 'Complete specification framework for the openDesk Edu ecosystem',
-  favicon: 'img/favicon.ico',
 
   url: 'https://spec.opendesk-edu.org',
   baseUrl: '/',
@@ -39,13 +38,8 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/social-card.png',
     navbar: {
       title: 'OpenSpec',
-      logo: {
-        alt: 'openDesk Edu Logo',
-        src: 'img/logo.svg',
-      },
       items: [
         {
           type: 'docSidebar',
