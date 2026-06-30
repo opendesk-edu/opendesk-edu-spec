@@ -155,7 +155,7 @@ level. Disabling brute-force protection in production is NEVER permitted.
 - [Security Threat Model](./threat-model/) (threat mitigations)
 - [Compliance Checklists](./security/compliance-checklists/) (verification steps)
 - [Deployment](./deployment/) (PSA enforcement, security context patterns)
-- `../_registry/interconnection-matrix.md` (network dependencies)
+- `../_registry/interconnection-matrix/` (network dependencies)
 
 ## Security Context Patterns by Tier
 

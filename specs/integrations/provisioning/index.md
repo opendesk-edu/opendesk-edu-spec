@@ -189,4 +189,4 @@ entries with course group memberships.
 - [File Store](../file-store) (OpenProject-Nextcloud integration)
 - [Intercom](../intercom) (silent login)
 - [LDAP]( ../../auth/ldap/) (group sync from OSS)
-- `../_registry/interconnection-matrix.md` (LDAP SYNC relationships)
+- `../_registry/interconnection-matrix/` (LDAP SYNC relationships)

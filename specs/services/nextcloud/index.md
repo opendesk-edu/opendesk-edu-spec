@@ -246,7 +246,7 @@ Nextcloud SHALL integrate with the Nubus central navigation bar.
 - [Keycloak OIDC Token](../../integrations/api-contracts/#contract-keycloak-oidc-token-endpoint) — authentication
 - [Intercom Silent Login](../../integrations/api-contracts/#contract-intercom-silent-login) — Filepicker/OX integration
 - [WOPI Discovery + CheckFileInfo](../../integrations/api-contracts/#contract-wopi-discovery-and-checkfileinfo) — Collabora office editing
-- [WOPI SaveChild](../../integrations/api-contracts/#wopi-savechild-endpoint) — Collabora new document creation
+- [WOPI SaveChild](../../integrations/api-contracts/#contract-wopi-savechild) — Collabora new document creation
 - [S3 Operations](../../integrations/api-contracts/#contract-s3-object-storage) — file storage
 - [ClamAV ICAP Scan](../../integrations/api-contracts/#contract-clamav-icap-scan) — virus scanning
 - [Notify Push WebSocket](../../integrations/api-contracts/#contract-notify-push-websocket) — real-time notifications

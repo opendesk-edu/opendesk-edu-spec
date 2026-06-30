@@ -114,6 +114,8 @@ mechanism, and error codes.
 
 ### SAML POST Metadata Endpoint (DFN-AAI Federation)
 
+## Contract: SAML POST Metadata (DFN-AAI IdP Registration)
+
 **Service**: Keycloak → DFN-AAI IdP Registration
 **Endpoint**: `POST /admin/realms/opendek/services`
 **Auth**: UMC admin (basic auth) or Keycloak admin client credentials
@@ -310,6 +312,8 @@ Content-Type: application/octet-stream
   "LastModifiedTime": "2026-01-15T11:45:00Z"
 }
 ```
+
+## Contract: WOPI SaveChild
 
 ### SaveChild Endpoint (for creating new documents)
 
@@ -622,7 +626,7 @@ Where `AGpkb2UAbXlwYXNzd29yZA==` is Base64(`\0jdoe\0mypassword`)
 
 - [Cross-Service Workflows](../cross-service-workflows) (end-to-end flows using these contracts)
 - [Service specs](../../services/) (individual service authentication requirements)
-- `../_registry/interconnection-matrix.md` (AUTH and TOKEN relationship types)
+- `../_registry/interconnection-matrix/` (AUTH and TOKEN relationship types)
 
 ## Contract Index
 

@@ -199,7 +199,7 @@ authentication and bucket management.
 
 This spec integrates with:
 - [Disaster Recovery](./disaster-recovery/) (PB/DRT phases and verification checklists)
-- [K8up CRDs for backup Schedules](./../_registry/implementation-reference.md) (Schedule, Prune, Backup, Restore, Archive CRs)
+- [K8up CRDs for backup Schedules](./../_registry/implementation-reference/) (Schedule, Prune, Backup, Restore, Archive CRs)
 - [Univention Directory Manager REST (UMS REST) API == 自定义备份]== not in spec repository (deployment-only)
 - [Rack-based RWO per-node schedule implementation]== Pending
 

@@ -249,4 +249,4 @@ under `nextcloudOauthClientSecret`.
 
 - [Provisioning](./provisioning/) (user account linking)
 - [API Contracts](./api-contracts/) (OAuth2 token management)
-- `../_registry/interconnection-matrix.md` (DATA relationship: OpenProject → Nextcloud)
+- `../_registry/interconnection-matrix/` (DATA relationship: OpenProject → Nextcloud)

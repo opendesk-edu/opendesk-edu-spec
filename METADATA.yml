@@ -1,98 +1,109 @@
 ---
 title: openDesk Edu OpenSpec Metadata Index
-generated: "2026-06-27"
-total_specs: 53
+generated: "2026-06-30"
+total_specs: 64
 ---
 
 # Spec Metadata Index
 
-Machine-readable metadata for all openDesk Edu OpenSpec files. This index
-enables tool automation (CI, search, linting) without modifying spec files.
+Machine-readable metadata for all openDesk Edu OpenSpec files.
 
-## Service Specs
+## Services
 
-| Spec | Domain | Auth | Database | Storage | Cache | Has Scenarios | Tier |
-|------|--------|------|----------|---------|-------|--------------|------|
-| nubus | services/iam | Internal (Keycloak+OpenLDAP) | PostgreSQL | RWX PVC | Redis + Memcached | 7 | Critical |
-| ilias | services/education | SAML | MariaDB Galera | CephFS RWX + S3 | — | 7 | Critical |
-| moodle | services/education | SAML (Shibboleth SP) | MariaDB | CephFS RWX | — | 3 | Critical |
-| bigbluebutton | services/education | SAML | PostgreSQL | CephFS RWX | Redis | 4 | Critical |
-| etherpad | services/education | OIDC | PostgreSQL | — | — | 2 | Low |
-| bookstack | services/knowledge | SAML | MariaDB | — | — | 2 | Medium |
-| xwiki | services/knowledge | OIDC + LDAP | PostgreSQL/MariaDB | RWO | — | 6 | High |
-| nextcloud | services/files | OIDC | MariaDB/PostgreSQL | S3 + CephFS RWX | Redis | 13 | Critical |
-| opencloud | services/files | OIDC | MariaDB | CephFS + S3 | Redis | 9 | Critical |
-| collabora | services/collaboration | None (WOPI) | None | None | — | 7 | High |
-| cryptpad | services/collaboration | None (Nextcloud) | None | None | — | 2 | Medium |
-| notes | services/productivity | OIDC | PostgreSQL | S3 | Redis | 7 | Medium |
-| element | services/communication | OIDC | PostgreSQL | S3 | Redis | 9 | High |
-| ox-appsuite | services/communication | SAML | MySQL | RWX PVC | — | — | High |
-| sogo | services/communication | OIDC | PostgreSQL | — | Memcached | 9 | High |
-| planka | services/productivity | OIDC | PostgreSQL | RWO PVC | — | 2 | Low |
-| zammad | services/support | SAML | PostgreSQL | RWO | Redis + ES | 5 | High |
-| limesurvey | services/education | LDAP | MariaDB | — | — | 2 | Low |
-| jitsi | services/communication | OIDC + Matrix UVS | — | — | — | 10 | High |
-| openproject | services/productivity | SAML | PostgreSQL | S3 | — | — | High |
-| drawio | services/productivity | None | None | None | — | 2 | Low |
-| excalidraw | services/productivity | None | None | None | — | 1 | Low |
-| self-service-password | services/support | LDAP | None | None | — | 2 | Low |
-| typo3 | services/knowledge | OIDC | MariaDB | None | — | 2 | Low |
-| dovecot-postfix | services/mail | KeycloakLDAP | PostgreSQL/MariaDB | RWO | — | 7 | High |
+| Spec | Auth | Database | Storage | Cache | Scenarios | Tier |
+|------|------|----------|---------|-------|-----------|------|
+| bigbluebutton | SAML 2.0 | PostgreSQL | RWX PVC | — | 16 | Standard |
+| bookstack | SAML 2.0 | MariaDB | RWO PVC | — | 8 | Low |
+| cert-manager | Internal | — | — | — | 6 | Critical |
+| collabora | Internal | — | — | — | 16 | Standard |
+| cryptpad | OIDC | — | S3, RWX PVC | Redis | 21 | Low |
+| dovecot-postfix | LDAP | PostgreSQL | RWO PVC | — | 13 | Low |
+| drawio | Internal | — | — | — | 19 | Low |
+| element | OIDC | PostgreSQL | S3 | Redis | 12 | Critical |
+| etherpad | OIDC | PostgreSQL | RWO PVC | — | 8 | Low |
+| excalidraw | Internal | — | — | — | 4 | Low |
+| haproxy-ingress | Internal | — | — | — | 9 | Critical |
+| ilias | SAML 2.0 | MariaDB | — | — | 17 | Standard |
+| jitsi | OIDC | — | — | — | 12 | Standard |
+| keycloak | SAML 2.0 | PostgreSQL | RWO PVC | — | 8 | Critical |
+| limesurvey | OIDC | MariaDB | RWO PVC | — | 5 | Low |
+| mariadb | SAML 2.0 | PostgreSQL | S3, RWO PVC | — | 7 | Critical |
+| minio | Internal | PostgreSQL | S3, RWX PVC, RWO PVC | — | 6 | Critical |
+| moodle | SAML 2.0 | MariaDB | RWX PVC | — | 15 | Standard |
+| nextcloud | OIDC | PostgreSQL | S3, RWX PVC | Redis | 20 | Critical |
+| notes | OIDC | PostgreSQL | S3 | Redis | 7 | Low |
+| nubus | SAML 2.0 | — | — | — | 8 | Critical |
+| opencloud | OIDC | — | S3 | — | 14 | Critical |
+| openproject | SAML 2.0 | PostgreSQL | S3, RWO PVC | Memcached | 19 | Low |
+| ox-appsuite | SAML 2.0 | MariaDB | — | — | 21 | Critical |
+| planka | OIDC | PostgreSQL | RWO PVC | — | 6 | Low |
+| postgresql | OIDC | PostgreSQL | S3, RWO PVC | — | 5 | Critical |
+| redis | Internal | — | S3, RWO PVC | Redis, Memcached | 6 | Critical |
+| self-service-password | LDAP | — | — | — | 6 | Low |
+| sogo | OIDC | PostgreSQL | — | Memcached | 20 | Critical |
+| typo3 | OIDC | MariaDB | RWO PVC | — | 6 | Low |
+| xwiki | OIDC | PostgreSQL | — | — | 15 | Standard |
+| zammad | SAML 2.0 | PostgreSQL | RWO PVC | Redis | 7 | Low |
 
-## Platform Specs
+## Platform
 
-| Spec | Domain | Tier |
-|------|--------|------|
-| deployment | platform | Critical |
-| environments | platform | High |
-| networking | platform | High |
-| security | platform | High |
-| storage | platform | High |
-| backup | platform | Critical |
-| monitoring | platform | High |
-| resource-sizing | platform | High |
-| security/threat-model | platform | High |
-| security/compliance-checklists | platform | High |
-| glossary | platform | High |
-| operations | platform | High |
-| performance | platform | High |
-| upgrade-migration | platform | High |
-| capacity-planning | platform | Medium |
-| secret-derivation | platform | High |
+| Spec | Auth | Database | Storage | Cache | Scenarios | Tier |
+|------|------|----------|---------|-------|-----------|------|
+| backup | Internal | PostgreSQL | S3, RWX PVC, RWO PVC | — | 16 | Low |
+| capacity-planning | Internal | PostgreSQL | S3, RWX PVC | Redis | 0 | Low |
+| deployment | Internal | PostgreSQL | S3 | Redis, Memcached | 10 | Low |
+| disaster-recovery | OIDC | PostgreSQL | S3, RWX PVC, RWO PVC | Redis | 0 | Low |
+| environments | Internal | — | S3, RWO PVC | — | 0 | Low |
+| glossary | SAML 2.0 | PostgreSQL | S3, RWX PVC, RWO PVC | Redis | 0 | Low |
+| monitoring | Internal | PostgreSQL | S3 | Redis | 0 | Low |
+| networking | Internal | — | — | — | 9 | Low |
+| operations | SAML 2.0 | MariaDB | S3, RWO PVC | — | 0 | Low |
+| performance | Internal | PostgreSQL | S3 | Redis | 0 | Low |
+| resource-sizing | LDAP | PostgreSQL | S3, RWX PVC | Redis | 0 | Low |
+| secret-derivation | LDAP | PostgreSQL | S3 | Redis | 13 | Low |
+| security | Internal | PostgreSQL | — | — | 10 | Low |
+| storage | Internal | PostgreSQL | S3, RWX PVC, RWO PVC | Redis | 6 | Low |
+| upgrade-migration | Internal | PostgreSQL | S3 | — | 4 | Low |
 
-## Auth Specs
+## Auth
 
-| Spec | Domain | Tier |
-|------|--------|------|
-| oidc | auth | Critical |
-| saml | auth | Critical |
-| ldap | auth | Critical |
+| Spec | Auth | Database | Storage | Cache | Scenarios | Tier |
+|------|------|----------|---------|-------|-----------|------|
+| federation | SAML 2.0 | — | — | — | 9 | Low |
+| ldap | SAML 2.0 | — | — | — | 7 | Low |
+| oidc | SAML 2.0 | — | — | — | 5 | Low |
+| saml | SAML 2.0 | — | — | — | 4 | Low |
 
-## Integration Specs
+## Integrations
 
-| Spec | Domain | Tier |
-|------|--------|------|
-| intercom | integrations | Critical |
-| provisioning | integrations | High |
-| file-store | integrations | High |
-| cross-service-workflows | integrations | High |
-| api-contracts | integrations | Critical |
-| spec-writing | methodology | High |
+| Spec | Auth | Database | Storage | Cache | Scenarios | Tier |
+|------|------|----------|---------|-------|-----------|------|
+| api-contracts | SAML 2.0 | — | — | — | 0 | Low |
+| cross-service-workflows | SAML 2.0 | — | S3 | — | 14 | Low |
+| file-store | Internal | — | — | — | 6 | Low |
+| intercom | OIDC | — | — | Redis | 8 | Low |
+| lti | Internal | — | — | — | 10 | Low |
+| provisioning | SAML 2.0 | — | — | — | 10 | Low |
 
-## Registry Specs
+## Methodology
 
-| Spec | Domain | Tier |
-|------|--------|------|
-| index | _registry | High |
-| interconnection-matrix | _registry | High |
-| test-mapping | _registry | High |
-| test-coverage-gaps | _registry | High |
-| implementation-reference | _registry | Medium |
+| Spec | Auth | Database | Storage | Cache | Scenarios | Tier |
+|------|------|----------|---------|-------|-----------|------|
+| spec-writing | SAML 2.0 | — | — | — | 18 | Low |
 
-## Change Proposals
+## Automation
 
-| Spec | Status | Tier |
-|------|--------|------|
-| exclude-rwo-pvc-from-backup | Active | Critical |
-| fix-nextcloud-aio-probe | Active | Critical |
-| replace-etherpad-postgresql | Archived | Low |
+| Spec | Auth | Database | Storage | Cache | Scenarios | Tier |
+|------|------|----------|---------|-------|-----------|------|
+| ralph-loop | Internal | — | — | — | 6 | Low |
+
+##  Registry
+
+| Spec | Auth | Database | Storage | Cache | Scenarios | Tier |
+|------|------|----------|---------|-------|-----------|------|
+| implementation-reference | Internal | — | — | — | 0 | Low |
+| _registry | SAML 2.0 | PostgreSQL | S3, RWX PVC, RWO PVC | Redis, Memcached | 0 | Low |
+| interconnection-matrix | LDAP | PostgreSQL | S3 | Redis, Memcached | 0 | Low |
+| test-coverage-gaps | SAML 2.0 | PostgreSQL | — | Redis, Memcached | 0 | Low |
+| test-mapping | SAML 2.0 | PostgreSQL | S3 | Redis | 0 | Low |
+

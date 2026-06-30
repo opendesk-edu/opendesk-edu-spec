@@ -193,4 +193,4 @@ OpenLDAP → Keycloak → [SOGo, XWiki, ILIAS, Moodle, OpenProject]
 ## Integrates With
 
 - All services in `../services/` (each provides an SSO entry point)
-- `../_registry/interconnection-matrix.md` (service dependency map)
+- `../_registry/interconnection-matrix/` (service dependency map)

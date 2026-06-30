@@ -10,10 +10,10 @@ and deployment ordering. This is the single source of truth for component metada
 
 ## Related References
 
-- [Service Interconnection Matrix](interconnection-matrix.md) — runtime dependencies, data flows, shared infrastructure
+- [Service Interconnection Matrix](interconnection-matrix/) — runtime dependencies, data flows, shared infrastructure
 - [Cross-Service Workflows](../integrations/cross-service-workflows/) — end-to-end user workflows spanning services
-- [Test Mapping](test-mapping.md) — spec requirements mapped to test files
-- [Implementation Reference](implementation-reference.md) — Helm chart/template paths
+- [Test Mapping](test-mapping/) — spec requirements mapped to test files
+- [Implementation Reference](implementation-reference/) — Helm chart/template paths
 
 ## Deployment Order
 
@@ -65,6 +65,7 @@ Wave 6 — Stateless tools (no dependencies):
 | [Etherpad](../services/etherpad/) | OIDC | PostgreSQL | — | — | Apache-2.0 | — |
 | [BookStack](../services/bookstack/) | SAML 2.0 | MariaDB | — | — | MIT | — |
 | [Planka](../services/planka/) | OIDC | PostgreSQL | RWO PVC (1Gi) | — | AGPL-3.0 | — |
+| [Dovecot / Postfix](../services/dovecot-postfix/) | LDAP | PostgreSQL + MariaDB | — | — | — | — |
 | [Zammad](../services/zammad/) | SAML 2.0 | PostgreSQL | — | Redis | AGPL-3.0 | — |
 | [LimeSurvey](../services/limesurvey/) | LDAP | MariaDB | — | — | GPL-2.0 | — |
 | [Draw.io](../services/drawio/) | None | — | — | — | Apache-2.0 | — |
@@ -90,7 +91,7 @@ Wave 6 — Stateless tools (no dependencies):
 |--------|----------|------|
 | OIDC | Nubus, SOGo, OpenCloud, Element, XWiki, Planka, Etherpad, Notes, TYPO3 | [OIDC](../auth/oidc/) |
 | SAML 2.0 | Nextcloud, OX AppSuite, BigBlueButton, ILIAS, Moodle, BookStack, Zammad, OpenProject | [SAML](../auth/saml/) |
-| LDAP | LimeSurvey, Self-Service Password | [LDAP](../auth/ldap/) |
+| LDAP | LimeSurvey, Self-Service Password, Dovecot-Postfix | [LDAP](../auth/ldap/) |
 | None | Draw.io, Excalidraw, Collabora, CryptPad | — |
 
 ## Shared Databases

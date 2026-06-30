@@ -164,7 +164,7 @@ OpenCloud SHALL expose liveness and readiness probes.
 - [Keycloak OIDC Token](../../integrations/api-contracts/#contract-keycloak-oidc-token-endpoint) — authentication
 - [S3 Object Storage](../../integrations/api-contracts/#contract-s3-object-storage) — file/media storage
 - [WOPI Discovery + CheckFileInfo](../../integrations/api-contracts/#contract-wopi-discovery-and-checkfileinfo) — office document editing
-- [WOPI SaveChild](../../integrations/api-contracts/#contract-wopi-savechild-endpoint) — new document creation
+- [WOPI SaveChild](../../integrations/api-contracts/#contract-wopi-savechild) — new document creation
 - [Intercom Silent Login](../../integrations/api-contracts/#contract-intercom-silent-login) — portal tile SSO navigation
 
 ## Depends On
