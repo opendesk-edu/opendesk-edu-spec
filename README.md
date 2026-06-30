@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 
 Interactive OpenSpec documentation for the openDesk Edu ecosystem - integrated open-source services with complete specifications.
 
-**Live Site**: https://openspec.opendesk-edu.org
+**Live Site**: https://spec.opendesk-edu.org
 
 ## What is This?
 
@@ -45,7 +45,7 @@ We chose **Docusaurus** over alternatives because it provides:
 ## Architecture
 
 ```
-openspec.opendesk-edu.org/
+| /
 ├── docs/                      # Documentation content
 │   ├── intro.md              # Landing page
 │   ├── methodology.md        # Spec methodology
