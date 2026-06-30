@@ -5,8 +5,8 @@ SPDX-License-Identifier: Apache-2.0
 
 # openDesk Edu Spec
 
-Complete specification framework for the openDesk Edu ecosystem — 53 specs
-covering 24 services, 17 platform topics, auth, integrations, and registry.
+Complete specification framework for the openDesk Edu ecosystem — 64 specs
+covering 32 services, 7 infrastructure components, 17 platform topics, auth, integrations, and registry.
 
 **Live docs**: https://spec.opendesk-edu.org
 **Repository**: https://github.com/opendesk-edu/opendesk-edu-spec
@@ -70,6 +70,10 @@ Active proposals live in `changes/`. Each has three files:
 - `proposal.md` — motivation, scope, acceptance criteria
 - `specs.md` — delta specs (added/modified/removed)
 - `tasks.md` — implementation steps
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for spec template, formatting rules, and review process.
 
 ## Related
 
