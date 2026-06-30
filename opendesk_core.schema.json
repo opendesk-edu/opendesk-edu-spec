@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendesk.eu/schema/core/2.x/app-integration.schema.json",
+  "title": "openDesk Core – App-Integrationsvertrag",
+  "type": "object",
+  "required": ["app", "identity", "portal", "routing", "observability"],
+  "properties": {
+    "app": {
+      "type": "object",
+      "required": ["name", "appVersion", "coreContract"],
+      "properties": {
+        "name": { "type": "string" },
+        "appVersion": { "type": "string" },
+        "coreContract": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" }
+      }
+    },
+    "identity": {
+      "description": "Bedarf am IAM-/Integrations-Layer. Layer provisioniert daraus den Keycloak-Client.",
+      "type": "object",
+      "required": ["sso"],
+      "properties": {
+        "sso": {
+          "type": "object",
+          "required": ["protocol", "clientId", "redirectUris"],
+          "properties": {
+            "protocol": { "enum": ["oidc", "saml"], "default": "oidc" },
+            "clientId": { "type": "string" },
+            "clientType": { "enum": ["confidential", "public"], "default": "confidential" },
+            "redirectUris": { "type": "array", "items": { "type": "string", "format": "uri-reference" } },
+            "scopes": { "type": "array", "items": { "type": "string" }, "default": ["openid", "profile", "email"] }
+          }
+        },
+        "provisioning": {
+          "description": "SCIM statt LDAP-Sync.",
+          "type": "object",
+          "properties": {
+            "scim": { "type": "boolean", "default": false },
+            "resources": { "type": "array", "items": { "enum": ["Users", "Groups"] } }
+          }
+        }
+      }
+    },
+    "portal": {
+      "description": "Registrierung der Kachel im Navigation-Layer.",
+      "type": "object",
+      "required": ["displayName", "entryUrl"],
+      "properties": {
+        "displayName": { "type": "string" },
+        "entryUrl": { "type": "string", "format": "uri-reference" },
+        "iconRef": { "type": "string" },
+        "category": { "enum": ["kommunikation", "kollaboration", "wissen", "projekte"] }
+      }
+    },
+    "routing": {
+      "type": "object",
+      "required": ["hostname", "servicePort"],
+      "properties": {
+        "hostname": { "type": "string" },
+        "path": { "type": "string", "default": "/" },
+        "servicePort": { "type": "integer" },
+        "tls": { "type": "boolean", "default": true }
+      }
+    },
+    "persistence": {
+      "description": "Datastores, die der Ops-Layer bereitstellt/verdrahtet.",
+      "type": "object",
+      "properties": {
+        "datastores": { "type": "array", "items": { "enum": ["postgresql", "mariadb", "redis", "s3"] } }
+      }
+    },
+    "observability": {
+      "type": "object",
+      "required": ["healthPath"],
+      "properties": {
+        "metricsPath": { "type": "string", "default": "/metrics" },
+        "healthPath": { "type": "string" },
+        "logFormat": { "enum": ["json"], "default": "json" }
+      }
+    }
+  },
+  "additionalProperties": false
+}
