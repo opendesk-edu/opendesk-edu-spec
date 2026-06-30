@@ -11,7 +11,7 @@ and deployment ordering. This is the single source of truth for component metada
 ## Related References
 
 - [Service Interconnection Matrix](interconnection-matrix.md) — runtime dependencies, data flows, shared infrastructure
-- [Cross-Service Workflows](../integrations/cross-service-workflows/spec.md) — end-to-end user workflows spanning services
+- [Cross-Service Workflows](../integrations/cross-service-workflows/) — end-to-end user workflows spanning services
 - [Test Mapping](test-mapping.md) — spec requirements mapped to test files
 - [Implementation Reference](implementation-reference.md) — Helm chart/template paths
 
@@ -47,38 +47,38 @@ Wave 6 — Stateless tools (no dependencies):
 
 | Service | Auth | Database | Storage | Cache | License | Alternative |
 |---------|------|----------|---------|-------|---------|-------------|
-| [Nubus](../services/nubus/spec.md) | OIDC (IdP) | PostgreSQL | RWX PVC | Redis | Apache-2.0 | — |
-| [Nextcloud](../services/nextcloud/spec.md) | SAML 2.0 | MariaDB | S3 | Redis | AGPL-3.0 | — |
-| [OpenCloud](../services/opencloud/spec.md) | OIDC | MariaDB | CephFS + S3 | Redis | Apache-2.0 | — |
-| [OX AppSuite](../services/ox-appsuite/spec.md) | SAML 2.0 | MySQL | RWX PVC | — | AGPL-3.0 | — |
-| [SOGo](../services/sogo/spec.md) | OIDC | PostgreSQL | — | Memcached | LGPL-3.0 | — |
-| [Element](../services/element/spec.md) | OIDC | PostgreSQL | S3 | Redis | Apache-2.0 | — |
-| [Jitsi](../services/jitsi/spec.md) | OIDC | — | — | — | Apache-2.0 | BigBlueButton |
-| [BigBlueButton](../services/bigbluebutton/spec.md) | SAML 2.0 | PostgreSQL | RWX PVC | Redis | LGPL-3.0 | Jitsi |
-| [OpenProject](../services/openproject/spec.md) | SAML 2.0 | PostgreSQL | S3 | — | GPL-3.0 | — |
-| [XWiki](../services/xwiki/spec.md) | OIDC | MariaDB / PostgreSQL | — | — | LGPL-2.1 | — |
-| [Collabora](../services/collabora/spec.md) | — | — | — | — | MPL-2.0 | — |
-| [CryptPad](../services/cryptpad/spec.md) | — | — | — | — | AGPL-3.0 | — |
-| [Notes](../services/notes/spec.md) | OIDC | PostgreSQL | S3 | Redis | AGPL-3.0 | — |
-| [ILIAS](../services/ilias/spec.md) | SAML 2.0 | MariaDB Galera | S3 | — | GPL-3.0 | Moodle |
-| [Moodle](../services/moodle/spec.md) | SAML 2.0 | MariaDB (external) | RWX PVC | — | GPL-3.0 | ILIAS |
-| [Etherpad](../services/etherpad/spec.md) | OIDC | PostgreSQL | — | — | Apache-2.0 | — |
-| [BookStack](../services/bookstack/spec.md) | SAML 2.0 | MariaDB | — | — | MIT | — |
-| [Planka](../services/planka/spec.md) | OIDC | PostgreSQL | RWO PVC (1Gi) | — | AGPL-3.0 | — |
-| [Zammad](../services/zammad/spec.md) | SAML 2.0 | PostgreSQL | — | Redis | AGPL-3.0 | — |
-| [LimeSurvey](../services/limesurvey/spec.md) | LDAP | MariaDB | — | — | GPL-2.0 | — |
-| [Draw.io](../services/drawio/spec.md) | None | — | — | — | Apache-2.0 | — |
-| [Excalidraw](../services/excalidraw/spec.md) | None | — | — | — | — | — |
-| [Self-Service Password](../services/self-service-password/spec.md) | LDAP | — | — | — | GPL-3.0 | — |
-| [TYPO3 CMS](../services/typo3/spec.md) | OIDC | MariaDB | — | — | Apache-2.0 | — |
+| [Nubus](../services/nubus/) | OIDC (IdP) | PostgreSQL | RWX PVC | Redis | Apache-2.0 | — |
+| [Nextcloud](../services/nextcloud/) | SAML 2.0 | MariaDB | S3 | Redis | AGPL-3.0 | — |
+| [OpenCloud](../services/opencloud/) | OIDC | MariaDB | CephFS + S3 | Redis | Apache-2.0 | — |
+| [OX AppSuite](../services/ox-appsuite/) | SAML 2.0 | MySQL | RWX PVC | — | AGPL-3.0 | — |
+| [SOGo](../services/sogo/) | OIDC | PostgreSQL | — | Memcached | LGPL-3.0 | — |
+| [Element](../services/element/) | OIDC | PostgreSQL | S3 | Redis | Apache-2.0 | — |
+| [Jitsi](../services/jitsi/) | OIDC | — | — | — | Apache-2.0 | BigBlueButton |
+| [BigBlueButton](../services/bigbluebutton/) | SAML 2.0 | PostgreSQL | RWX PVC | Redis | LGPL-3.0 | Jitsi |
+| [OpenProject](../services/openproject/) | SAML 2.0 | PostgreSQL | S3 | — | GPL-3.0 | — |
+| [XWiki](../services/xwiki/) | OIDC | MariaDB / PostgreSQL | — | — | LGPL-2.1 | — |
+| [Collabora](../services/collabora/) | — | — | — | — | MPL-2.0 | — |
+| [CryptPad](../services/cryptpad/) | — | — | — | — | AGPL-3.0 | — |
+| [Notes](../services/notes/) | OIDC | PostgreSQL | S3 | Redis | AGPL-3.0 | — |
+| [ILIAS](../services/ilias/) | SAML 2.0 | MariaDB Galera | S3 | — | GPL-3.0 | Moodle |
+| [Moodle](../services/moodle/) | SAML 2.0 | MariaDB (external) | RWX PVC | — | GPL-3.0 | ILIAS |
+| [Etherpad](../services/etherpad/) | OIDC | PostgreSQL | — | — | Apache-2.0 | — |
+| [BookStack](../services/bookstack/) | SAML 2.0 | MariaDB | — | — | MIT | — |
+| [Planka](../services/planka/) | OIDC | PostgreSQL | RWO PVC (1Gi) | — | AGPL-3.0 | — |
+| [Zammad](../services/zammad/) | SAML 2.0 | PostgreSQL | — | Redis | AGPL-3.0 | — |
+| [LimeSurvey](../services/limesurvey/) | LDAP | MariaDB | — | — | GPL-2.0 | — |
+| [Draw.io](../services/drawio/) | None | — | — | — | Apache-2.0 | — |
+| [Excalidraw](../services/excalidraw/) | None | — | — | — | — | — |
+| [Self-Service Password](../services/self-service-password/) | LDAP | — | — | — | GPL-3.0 | — |
+| [TYPO3 CMS](../services/typo3/) | OIDC | MariaDB | — | — | Apache-2.0 | — |
 
 ## Auth Methods
 
 | Method | Services | Spec |
 |--------|----------|------|
-| OIDC | Nubus, SOGo, OpenCloud, Element, XWiki, Planka, Etherpad, Notes, TYPO3 | [OIDC](../auth/oidc/spec.md) |
-| SAML 2.0 | Nextcloud, OX AppSuite, BigBlueButton, ILIAS, Moodle, BookStack, Zammad, OpenProject | [SAML](../auth/saml/spec.md) |
-| LDAP | LimeSurvey, Self-Service Password | [LDAP](../auth/ldap/spec.md) |
+| OIDC | Nubus, SOGo, OpenCloud, Element, XWiki, Planka, Etherpad, Notes, TYPO3 | [OIDC](../auth/oidc/) |
+| SAML 2.0 | Nextcloud, OX AppSuite, BigBlueButton, ILIAS, Moodle, BookStack, Zammad, OpenProject | [SAML](../auth/saml/) |
+| LDAP | LimeSurvey, Self-Service Password | [LDAP](../auth/ldap/) |
 | None | Draw.io, Excalidraw, Collabora, CryptPad | — |
 
 ## Shared Databases

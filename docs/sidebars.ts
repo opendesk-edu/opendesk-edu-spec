@@ -69,6 +69,13 @@ const sidebars: SidebarsConfig = {
         {type: 'doc', id: 'methodology/spec-writing'},
       ],
     },
+    {
+      type: 'category',
+      label: 'Automation',
+      items: [
+        {type: 'doc', id: 'automation/ralph-loop', label: 'Ralph Loop'},
+      ],
+    },
   ],
   servicesSidebar: [
     {type: 'doc', id: 'services/nubus', label: 'Nubus'},

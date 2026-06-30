@@ -3,7 +3,18 @@ lint:
   image: alpine
   script:
     - apk add --no-cache git
-    - find specs/ -name '*.md' -exec grep -L 'SPDX-FileCopyrightText' {} \;
-    - echo "Lint complete"
+    - |
+      VIOLATIONS=0
+      for f in $(find specs/ -name '*.md'); do
+        if ! head -5 "$f" | grep -q 'SPDX-FileCopyrightText'; then
+          echo "MISSING SPDX header: $f"
+          VIOLATIONS=$((VIOLATIONS + 1))
+        fi
+      done
+      if [ "$VIOLATIONS" -gt 0 ]; then
+        echo "Lint failed: $VIOLATIONS files missing SPDX headers"
+        exit 1
+      fi
+      echo "All $(find specs/ -name '*.md' | wc -l) specs have valid SPDX headers"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
