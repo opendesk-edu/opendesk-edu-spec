@@ -3,7 +3,7 @@ SPDX-FileCopyrightText: 2026 openDesk Edu Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
 
-# openDesk Edu OpenSpec
+# openDesk Edu Spec
 
 Complete specification framework for the openDesk Edu ecosystem — 53 specs
 covering 24 services, 17 platform topics, auth, integrations, and registry.
